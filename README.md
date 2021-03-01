@@ -57,3 +57,7 @@ Project on location-based gaming App.
 1. [ ] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
 1. [ ] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
+
+## References
+- [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
+- [Talk2-Trasure-7](https://github.com/Rajeshwari-Rudra/talk-2-treasure-7)
