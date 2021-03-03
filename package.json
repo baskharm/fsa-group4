@@ -1,19 +1,23 @@
 {
   "name": "fsa-group4",
   "version": "1.0.0",
-  "description": "Location based app",
-  "main": "index.js",
+  "description": "Project on location-based gaming App.",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bhaskar2909/fsa-group4.git"
   },
-  "author": "Rajeshwari-Rudra",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Bhaskar2909/fsa-group4/issues"
   },
-  "homepage": "https://github.com/Bhaskar2909/fsa-group4#readme"
+  "homepage": "https://github.com/Bhaskar2909/fsa-group4#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
