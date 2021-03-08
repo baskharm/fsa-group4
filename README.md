@@ -61,3 +61,6 @@ Project on location-based gaming App.
 ## References
 - [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
 - [Talk2-Trasure-7](https://github.com/Rajeshwari-Rudra/talk-2-treasure-7)
+
+## Project
+- [Status of our Project](https://github.com/Bhaskar2909/fsa-group4/projects/1)
