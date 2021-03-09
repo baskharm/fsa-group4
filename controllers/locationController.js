@@ -3,18 +3,8 @@
  *  Handles requests related to location (see routes)
  *
  * @author Bhaskar reddy Minupuri <S538310@nwmissouri.edu>
+ * @author Rajeshwari Rudravaram <s538361@nwmissouri.edu>
  */
-
-// import dependencies
-// const express = require('express');
-
-// import local code files
-// const model = require('../models/location.js');
-
-// create a router
-// const router = express.Router();
-
-// module.exports = router;
 
 const LOG = require('../util/logger');
 const db = require('../models/index')();
@@ -69,11 +59,6 @@ module.exports.saveNew = async (req, res) => {
     await context.models.Location.create(req.body);
     return res.redirect('/location');
   } catch (err) {
-    // if (err instanceof ValidationError) {
-    //   const item = await prepareInvalidItem(err, req);
-    //   res.locals.location = item;
-    //   return res.render('location/create.ejs', { title: tabTitle, res });
-    // }
     return res.redirect('/location');
   }
 };
@@ -89,11 +74,6 @@ module.exports.saveEdit = async (req, res) => {
     LOG.info(`Updated: ${JSON.stringify(updated)}`);
     return res.redirect('/location');
   } catch (err) {
-    // if (err instanceof ValidationError) {
-    //   const item = await prepareInvalidItem(err, req);
-    //   res.locals.location = item;
-    //   return res.render('location/edit.ejs', { title: tabTitle, res });
-    // }
     return res.redirect('/location');
   }
 };
