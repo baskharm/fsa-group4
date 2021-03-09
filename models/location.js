@@ -1,3 +1,11 @@
+/**
+ *  Location model
+ *  It describes each attribute.
+ *
+ * @author Rajeshwari Rudravaram  <s538361@nwmissouri.edu>
+ *
+ * 
+ */
 module.exports = (db, DataTypes) => {
   db.define('Location', {
     locationId: {
