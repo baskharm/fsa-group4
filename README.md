@@ -58,7 +58,8 @@ Project on location-based gaming App.
 1. [ ] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
-
+# Hosted App Link: 
+[link](https://fsagroup4.herokuapp.com/)
 ## Project
 - [Project status on Kanban Board](https://github.com/Bhaskar2909/fsa-group4/projects/1)
 
