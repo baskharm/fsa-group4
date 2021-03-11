@@ -59,9 +59,77 @@ Project on location-based gaming App.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
 # Hosted App Link: 
-[link](https://fsagroup4.herokuapp.com/)
+[Heroku app link](https://fsagroup4.herokuapp.com/)
+
 ## Project
 - [Project status on Kanban Board](https://github.com/Bhaskar2909/fsa-group4/projects/1)
+
+## Guidelines to Contribute
+
+* You can fork this repo by clicking on the fork icon on this repo.
+* Clone it to your local machine.
+
+### Step 1 - To get the fresh code
+
+1. Pull the fresh code from shared cloud repo.
+1. Update your cloud repo by using git add and git push commands shown below.
+
+```Powershell
+git clone "https://github.com/Bhaskar2909/fsa-group4"
+git pull 
+git add .
+git push
+```
+
+### Step 2 - Make your contributions
+
+You can test the code by formatting it with Prettier and lint (clean it up) with ESLint.
+You can check the scripts in package.json.
+- Add required dependencies by installing them.
+1. While code is fresh, make your local edits.
+2. Verify the app still runs & standarize your code.
+
+```PowerShell
+npm install
+npm run start
+
+npm run prettier
+npm run lint
+npm run lint-fix
+```
+
+Fix your code as suggested by the linter.
+
+### Step 3 - To save and share your work
+
+1. Git add & git commit locally.
+2. Git push to the origin.
+3. In your updated GitHub repo look for "Pull Request".
+4. Follow instructions (click the green buttons) to prepare a "pull request" into the main repo.
+
+### Step 4 - Refresh before making new contributions
+
+1. Git pull from shared repo to your laptop
+2. Git add by new files from root folder on down (git add .)
+3. Git push to your origin repo (your forked repo in the cloud)
+
+```Powershell
+git pull "https://github.com/Bhaskar2909/fsa-group4.git"
+git add .
+git push
+```
+
+## Start Options
+
+Start the app by running npm run start.
+Until error handling is complete, a clean shutdown is better.
+Once error handling is complete, use npm run dev to start with nodemon.
+
+```PowerShell
+npm run start
+```
+
+View the application locally at <http://localhost:3000/>
 
 ## References
 - [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
