@@ -1,41 +1,23 @@
 module.exports = [
     {
-        Name: 'Village O Apartments',
+        Name: 'Colden Pond',
         type: 'circle',
-        coordinates:
-            [
-                {
-                    latitude: 33.4271871,
-                    longitude: -111.8848516
-                },
-                {
-                    latitude: 33.4271852,
-                    longitude: -111.8848570
-                },
-                {
-                    latitude: 33.4271822,
-                    longitude: -111.8848589
-                }
-            ]
+        latutide: 40.35112686830798,
+        longitude: -94.88220243759864
     },
     {
         Name: 'Horizons West Apartments',
         type: 'circle',
-        coordinates:
-            [
-                {
-                    latitude: 41.31447748801441,
-                    longitude: -95.05660917970772
-                },
-                {
-                    latitude: 41.31447748801235,
-                    longitude: -95.05660917970880
-                },
-                {
-                    latitude: 41.31447748801211,
-                    longitude: -95.05660917970970
-                }
-            ]
+        latitude: 41.31447748801441,
+        longitude: -95.05660917970772
+    },
+    {
+        Name: 'B.D Owens Library',
+        type: 'circle',
+        Latitude: 40.35380237028086,
+        Longitude: -94.8859849358351
+
+
     }
 
 ];
