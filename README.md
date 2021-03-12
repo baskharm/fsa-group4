@@ -20,9 +20,10 @@ Project on location-based gaming App.
 * Platform: Node(Version - v15.1.0)
 * Web Framework : Express
 * View engine : EJS
-* ORM(Object Relational Mapping) : PostgreSQL
-* Coding standards : Enforce AirBnB/Prettier/ESlint
+* ORM(Object Relational Mapping) : Sequelize
+* Data store: PostgreSQL
 * API : Google Maps
+* Coding standards : Enforce AirBnB/Prettier/ESlint
 
 ## CI/CD
 - Auto-deploy from main repo is required.
@@ -37,18 +38,11 @@ Project on location-based gaming App.
 ## Development of App
 - Data store for Development: PostgreSQL
 
-## To Publish an App
-- [Heroku](https://id.heroku.com/login)
-* Data store for production: PostgreSQL
+# Hosted App Link: 
+[Heroku hosted app link](https://fsagroup4.herokuapp.com/)
 
-## CRUD operations for Location
-- User can enable all CRUD options (create, read, update, delete) on locations.
-   * create.ejs
-   * delete.ejs
-   * details.ejs
-   * edit.ejs
-   * index.ejs
-- Locations are based on circles.
+## Project
+- [Project status on Kanban Board](https://github.com/Bhaskar2909/fsa-group4/projects/1)
 
 ## User Stories
 
@@ -58,11 +52,14 @@ Project on location-based gaming App.
 1. [ ] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
-# Hosted App Link: 
-[Heroku app link](https://fsagroup4.herokuapp.com/)
-
-## Project
-- [Project status on Kanban Board](https://github.com/Bhaskar2909/fsa-group4/projects/1)
+## CRUD operations for Location
+- User can enable all CRUD options (create, read, update, delete) on locations.
+   * create.ejs
+   * delete.ejs
+   * details.ejs
+   * edit.ejs
+   * index.ejs
+- Locations are based on circles.
 
 ## Guidelines to Contribute
 
@@ -131,6 +128,17 @@ npm run start
 
 View the application locally at <http://localhost:3000/>
 
+## To Publish an App
+- [Heroku Login](https://id.heroku.com/login)
+* Data store for production: PostgreSQL
+
 ## References
 - [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
 - [Talk2-group-7](https://github.com/KHARIKA17/talk-2-group-7)
+
+## Remainders
+- Avoid spaces in folders and file names.
+- Don't work on stale code - ALWAYS pull first
+- Don't work on your desktop - organize your repos either by class or under a common folder (e.g., github or other).
+- Deploy as you work - if everything passes tests, do add / commit / push and deploy frequently (several times a week). 
+- Do hard things early. Do not delay figuring out the hard questions.
