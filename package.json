@@ -24,7 +24,7 @@
     "dotenv": "latest",
     "ejs": "latest",
     "express": "latest",
-    "express-ejs-layouts": "latest",
+    "express-ejs-layouts": "^2.5.0",
     "express-session": "latest",
     "express-status-monitor": "latest",
     "express-validator": "latest",
