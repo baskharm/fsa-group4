@@ -11,16 +11,12 @@
  */
 
 module.exports = async (sequelize) => {
-    const {
-        Location,
-        Clue,
-
-    } = await sequelize.models;
+    const Location = await sequelize.models;
 
 
     // each location can have one or more clues
-    Location.hasMany(Clue);
-    Clue.belongsTo(Location);
+    // Location.hasMany(Clue);
+    // Clue.belongsTo(Location);
 
 
 };
