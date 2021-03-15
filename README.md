@@ -62,14 +62,12 @@ Project on location-based gaming App.
 - Locations are based on circles.
 
 ## Guidelines to Contribute
-
-* You can fork this repo by clicking on the fork icon on this repo.
-* Clone it to your local machine.
+* In order to get someone's repo into your local machine you should first fork it into repo then Clone it to your local machine.
 
 ### Step 1 - To get the fresh code
 
-1. Pull the fresh code from shared cloud repo.
-1. Update your cloud repo by using git add and git push commands shown below.
+1. Everytime you should pull the fresh code from shared cloud repo and then add or modify the code then commit it by using git add and git push commands below line interface
+1. Update your cloud repo by using git add and git push commands in command .
 
 ```Powershell
 git clone "https://github.com/Bhaskar2909/fsa-group4"
