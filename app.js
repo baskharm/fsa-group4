@@ -14,9 +14,9 @@ const helmet = require('helmet'); // safer http headers
 const compression = require('compression'); // smaller=faster
 
 // dependencies - passport authentication
-const flash = require('connect-flash'); // used with passport
-const passport = require('passport');
-const session = require('express-session');
+// const flash = require('connect-flash'); // used with passport
+// const passport = require('passport');
+// const session = require('express-session');
 
 // bring in logger
 const LOG = require('./util/logger');
@@ -40,9 +40,9 @@ app.use(expressStatusMonitor());
 // app middleware - basic
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // bodyParser not needed
-// app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static('public'));
-// app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(expressLayouts);
 app.use(morgan('combined'));
 
@@ -64,13 +64,13 @@ app.use(baseUrl, require('./routes/index'));
 
 // error handler from
 // https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
-app.use((req, res, err) => {
-  // set locals, only providing errors in development
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error.ejs', { title: 'Error', res });
-});
+// app.use((req, res, err) => {
+//   // set locals, only providing errors in development
+//   res.locals.error = req.app.get('env') === 'development' ? err : {};
+//   // render the error page
+//   res.status(err.status || 500);
+//   res.render('error.ejs', { title: 'Error', res });
+// });
 
 // export the express app (helpful for testing)
 // see bin/www.js for environment-specific startup
