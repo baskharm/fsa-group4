@@ -29,10 +29,7 @@ module.exports = (db, DataTypes) => {
       allowNull: false,
       validate: { min: -180, max: 180 }
     },
-    locationValue: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
+
     radius: {
       type: DataTypes.INTEGER,
       required: true,
