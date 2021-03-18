@@ -2,6 +2,13 @@ const LOG = require('./logger');
 
 module.exports = async (db) => {
   LOG.info('Starting seeder.......................');
+  try {
+    const syncResult = await db.sync({ force: true });
+    LOG.info(`Recreated all tables: ${syncResult}`);
+  } catch (err) {
+    LOG.error(`ERROR: on sync process - ${err.message}`);
+  }
+
 
   try {
     await db.models.Location.bulkCreate(
