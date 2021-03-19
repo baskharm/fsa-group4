@@ -58,8 +58,7 @@ app.use((req, res, next) => {
 
 LOG.info('app middleware configured');
 
-const purl = process.env.BASE_URL || '/aboutpage';
-app.use(purl,require('./routes/index'));
+
 
 // app middleware - configure routing
 const baseUrl = process.env.BASE_URL || '/';
@@ -87,9 +86,7 @@ module.exports = app;
 // app.get('/', (req, res) => {
 //   res.send('Welcome to Location based gaming app.')
 // })
- app.get('/aboutpage', (req, res) => {
-    res.send(' My app is awesome.')
-  })
+
 
 
   
