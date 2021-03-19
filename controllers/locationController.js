@@ -62,9 +62,29 @@ module.exports.saveNew = async (req, res) => {
     return res.redirect('/location');
   }
 };
+try {
+  const context = await db;
+  await context.models.Location.create(req.body);
+  return res.redirect("/aboutp");
+} catch (err) {
+  return res.redirect("/aboutp");
+};
 
 // POST /save/:id
 module.exports.saveEdit = async (req, res) => {
+
+  module.exports.showIndex = async (req, res) => {
+    (await db).models.Location.findAll()
+      .then((data) => {
+        res.locals.locations = data;
+        res.render("location", { title: tabTitle, res });
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message: err.message || "Error retrieving all.",
+        });
+      });
+  };
   try {
     const reqId = parseInt(req.params.id, 10);
     const context = await db;

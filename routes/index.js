@@ -18,6 +18,8 @@ router.get('/', (req, res) => {
     });
 });
 
+
+
 router.get('/index', (req, res) => {
     return res.redirect('/');
 });
@@ -29,6 +31,11 @@ try {
     LOG.error(`ERROR: ${err.message}`);
 }
 
+try {
+    router.use("/aboutp", locationRoutes);
+  } catch (err) {
+    LOG.error(`ERROR: ${err.message}`);
+  }
 LOG.info('routes/index.js: ENDING custom routes......');
 
 module.exports = router;
