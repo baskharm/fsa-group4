@@ -32,7 +32,7 @@ try {
 }
 
 try {
-    router.use("/aboutp", locationRoutes);
+    router.use("/aboutpage", locationRoutes);
   } catch (err) {
     LOG.error(`ERROR: ${err.message}`);
   }
