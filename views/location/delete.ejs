@@ -18,7 +18,7 @@
             <th scope="row"><%= location.locationId %></th>
             <td><%= location.locationName%></td>
             <td>
-              <form action="/location/delete/<%=location.id%>" method="post">
+              <form action="/location/delete/<%=location.locationId%>" method="post">
                 <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('Are you sure?')"/>
               </form>
             </td>
