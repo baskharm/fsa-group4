@@ -28,6 +28,8 @@ router.get('/details/:id', controller.showDetails);
 router.get('/edit/:id', controller.showEdit);
 router.get('/delete/:id', controller.showDelete);
 
+router.get('/location',controller.showIndex);
+
 LOG.info('Loaded locations routes.');
 
 module.exports = router;
