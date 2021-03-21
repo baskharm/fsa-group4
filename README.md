@@ -1,4 +1,5 @@
-# fsa-group4
+# fsa-group4 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://fsagroup4.herokuapp.com/)
+
 Project on location-based gaming App.
 
 ## Group Members
@@ -53,12 +54,13 @@ Project on location-based gaming App.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
 ## CRUD operations for Location
-- User can enable all CRUD options (create, read, update, delete) on locations.
+- User can enable all CRUD options (create, read, update, delete,list) on locations.
    * create.ejs
    * delete.ejs
    * details.ejs
    * edit.ejs
    * index.ejs
+   * list.ejs
 - Locations are based on circles.
 
 ## Guidelines to Contribute
@@ -100,11 +102,10 @@ Fix your code as suggested by the linter.
 1. Git add & git commit locally.
 2. Git push to the origin.
 3. In your updated GitHub repo look for "Pull Request".
-4. Follow instructions (click the green buttons) to prepare a "pull request" into the main repo.
 
-### Step 4 - Refresh before making new contributions
+### Step 4 - Refresh the code before making any new contributions
 
-1. Git pull from shared repo to your laptop
+1. Git pull from shared repo to your local machine
 2. Git add by new files from root folder on down (git add .)
 3. Git push to your origin repo (your forked repo in the cloud)
 
@@ -136,7 +137,7 @@ View the application locally at <http://localhost:3000/>
 
 ## Remainders
 - Avoid spaces in folders and file names.
-- Don't work on stale code - ALWAYS pull first
+- Don't work on stale code - "ALWAYS PULL FIRST"
 - Don't work on your desktop - organize your repos either by class or under a common folder (e.g., github or other).
 - Deploy as you work - if everything passes tests, do add / commit / push and deploy frequently (several times a week). 
 - Do hard things early. Do not delay figuring out the hard questions.
