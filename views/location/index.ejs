@@ -24,8 +24,11 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
+              <th scope="col">Location ID</th>
+              <th scope="col">Location Name</th>
+              <th scope="col">Location Latitude</th>
+              <th scope="col">Location Longitude</th>
+              
               <th >Action</th>
             </tr>
           </thead>
@@ -34,6 +37,8 @@
             <tr>
               <th scope="row"><%= locations[i].locationId %></th>
               <td><%= locations[i].locationName%></td>
+              <td><%= locations[i].locationLatitude%></td>
+              <td><%= locations[i].locationLongitude%></td>
               <td>
                 <a class="btn btn-primary details" href="../location/details/<%=locations[i].locationId%>"><i
                     class="fab fa-sistrix" title="test"></i></a>
@@ -53,7 +58,7 @@
         <% } %>
     
         <br>
-        <h3>Mouse over icons to see where you will go.</h3>
+        <!-- <h3>Mouse over icons to see where you will go.</h3> -->
     
       </div>
     </div>
