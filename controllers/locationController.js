@@ -69,7 +69,7 @@ module.exports.saveEdit = async (req, res) => {
 
  
   try {
-    const reqId = parseInt(req.params.locationId, 10);
+    const reqId = parseInt(req.params.locationId, 1);
     const context = await db;
     const updated = await context.models.Location.update(req.body, {
       where: { locationId: reqId },
@@ -84,7 +84,7 @@ module.exports.saveEdit = async (req, res) => {
 // POST /delete/:id
 module.exports.deleteItem = async (req, res) => {
   try {
-    const reqId = parseInt(req.params.locationId, 10);
+    const reqId = parseInt(req.params.locationId, 1);
     const deleted = (await db).models.Location.destroy({
       where: { locationId: reqId },
     });
@@ -171,6 +171,21 @@ module.exports.showEdit = async (req, res) => {
     .catch((err) => {
       res.status(500).send({
         message: `Error retrieving item with id=${locationId}: ${err.message}`,
+      });
+    });
+};
+
+// GET /list of locations
+
+module.exports.showList = async (req, res) => {
+  (await db).models.Location.findAll()
+    .then((list) => {
+      res.locals.locations = list;
+      res.render('location/list.ejs', { title: tabTitle, res });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || 'Error retrieving all.',
       });
     });
 };
