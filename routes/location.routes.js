@@ -30,6 +30,8 @@ router.get('/delete/:locationId', controller.showDelete);
 
 router.get('/location',controller.showIndex);
 
+router.get('/list',controller.showList);
+
 LOG.info('Loaded locations routes.');
 
 module.exports = router;
