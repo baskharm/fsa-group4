@@ -179,8 +179,8 @@ module.exports.showEdit = async (req, res) => {
 
 module.exports.showList = async (req, res) => {
   (await db).models.Location.findAll()
-    .then((list) => {
-      res.locals.locations = list;
+    .then((data) => {
+      res.locals.locations = data;
       res.render('location/list.ejs', { title: tabTitle, res });
     })
     .catch((err) => {
