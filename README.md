@@ -134,6 +134,7 @@ View the application locally at <http://localhost:3000/>
 ## References
 - [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
 - [Talk2-group-7](https://github.com/KHARIKA17/talk-2-group-7)
+- [Talk-2-treasure-5](https://github.com/Puneeth159/talk-2-treasure-5)
 
 ## Remainders
 - Avoid spaces in folders and file names.
