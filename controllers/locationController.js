@@ -69,7 +69,7 @@ module.exports.saveEdit = async (req, res) => {
 
  
   try {
-    const reqId = parseInt(req.params.locationId, 1);
+    const reqId = parseInt(req.params.locationId);
     const context = await db;
     const updated = await context.models.Location.update(req.body, {
       where: { locationId: reqId },
@@ -84,7 +84,7 @@ module.exports.saveEdit = async (req, res) => {
 // POST /delete/:id
 module.exports.deleteItem = async (req, res) => {
   try {
-    const reqId = parseInt(req.params.locationId, 1);
+    const reqId = parseInt(req.params.locationId);
     const deleted = (await db).models.Location.destroy({
       where: { locationId: reqId },
     });
