@@ -11,7 +11,8 @@ module.exports = (db, DataTypes) => {
     locationId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false
+      allowNull: false,
+      autoIncrement: true
     },
     locationName: {
       type: DataTypes.STRING(30),
@@ -28,12 +29,12 @@ module.exports = (db, DataTypes) => {
       type: DataTypes.DECIMAL(11, 8),
       allowNull: false,
       validate: { min: -180, max: 180 }
-    },
-
-    radius: {
-      type: DataTypes.INTEGER,
-      required: true,
     }
+
+    // radius: {
+    //   type: DataTypes.INTEGER,
+    //   required: true,
+    // }
   });
 
 };
