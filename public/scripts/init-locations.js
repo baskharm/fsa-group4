@@ -14,8 +14,8 @@ module.exports = [
     {
         Name: 'B.D Owens Library',
         type: 'circle',
-        Latitude: 40.35380237028086,
-        Longitude: -94.8859849358351
+        latitude: 40.35380237028086,
+        longitude: -94.8859849358351
 
 
     }
