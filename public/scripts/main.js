@@ -1,6 +1,7 @@
-import data from './speech.js'
-// import locationsArray from "./init-locations.js"
+import { isInsideCircle } from "./location-circle.js";
+import locationsArray from "./init-locations.js"
 
+let device, location;
 let colorElement1 = document.getElementById("status");
 let colorElement2 = document.getElementById("status1");
 
@@ -15,24 +16,42 @@ colorElement2.addEventListener('click', onClickSquareBox2);
 colorElement2.addEventListener('touch', onClickSquareBox2);
 
 
-
 async function onClickSquareBox1() {
-
-    data.forEach(function(value){
-        document.getElementById("status").innerHTML = "You have reached the target location.";
-        let utterance = new SpeechSynthesisUtterance(value.status_message);
-        speechSynthesis.speak(utterance);
-    });
+    location = locationsArray[0];
+    let confirmation = "Your target location is " + location.name;
+    document.getElementById("status1").innerHTML = confirmation;
+    let utterance = new SpeechSynthesisUtterance(confirmation);
+    speechSynthesis.speak(utterance);
 }
 
 async function onClickSquareBox2() {
-    
-    data.forEach(function(value){
-        document.getElementById("status1").innerHTML = value.status1_message;
-        let utterance = new SpeechSynthesisUtterance(value.status1_message);
-        speechSynthesis.speak(utterance);
-    });
+    device = await getLocation();
+
+    let isInside = isInsideCircle(device, location);
+    let status;
+    let speak;
+    status = "Device Coordinates: " + "<br>";
+    status += "Latitude: " + device.coords.latitude + "<br>";
+    status += "Longitude: " + device.coords.longitude + "<br>";
+    if (isInside) {
+        status += "Congratulations!! You have reached Quest: " + location.name;
+        speak = "Congratulations!! You have reached Quest: " + location.name;
+    } else {
+        status += "You haven't reached the quest";
+        speak = "You haven't reached the quest";
+    }
+    document.getElementById("status2").innerHTML = status;
+    let utterance = new SpeechSynthesisUtterance(speak);
+    speechSynthesis.speak(utterance);
 }
 
+// collects current location
+async function getLocation() {
+    return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+    }).then((position) => {
+        return position;
+    });
+}
 
 
