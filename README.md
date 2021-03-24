@@ -1,6 +1,6 @@
-# fsa-group4 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://fsagroup4.herokuapp.com/)
+# Game of Treasures [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://fsagroup4.herokuapp.com/)
 
-Project on location-based gaming App.
+Project on location-based gaming App. It is a full stack gaming application which progress with clues.
 
 ## Group Members
 <table>
