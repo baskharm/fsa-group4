@@ -34,7 +34,7 @@ async function onClickSquareBox2() {
     status += "Latitude: " + device.coords.latitude + "<br>";
     status += "Longitude: " + device.coords.longitude + "<br>";
     if (isInside) {
-        status += "Congratulations!! You have reached Quest: " + location.name;
+        status += "Congratulations!! You have reached the destination: " + location.name;
         speak = "Congratulations!! You have reached Quest: " + location.name;
     } else {
         status += "You haven't reached the quest";

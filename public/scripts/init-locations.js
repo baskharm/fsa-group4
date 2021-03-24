@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         Name: 'Colden Pond',
         type: 'circle',
@@ -16,8 +16,5 @@ module.exports = [
         type: 'circle',
         latitude: 40.35380237028086,
         longitude: -94.8859849358351
-
-
     }
-
 ];
