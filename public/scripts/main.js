@@ -35,10 +35,10 @@ async function onClickSquareBox2() {
     status += "Longitude: " + device.coords.longitude + "<br>";
     if (isInside) {
         status += "Congratulations!! You have reached the destination: " + location.name;
-        speak = "Congratulations!! You have reached Quest: " + location.name;
+        speak = "Congratulations!! You have reached the destination: " + location.name;
     } else {
-        status += "You haven't reached the quest";
-        speak = "You haven't reached the quest";
+        status += "You haven't reached the destination";
+        speak = "You haven't reached the destination";
     }
     document.getElementById("status2").innerHTML = status;
     let utterance = new SpeechSynthesisUtterance(speak);
