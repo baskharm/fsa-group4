@@ -4,7 +4,7 @@ export default [
         type: 'circle',
         coordinate: [
             {
-                latitude: 40.35112686830798,
+            latitude: 40.35112686830798,
             longitude: -94.88220243759864}
         ],
         radiusMeters: 30.0,
