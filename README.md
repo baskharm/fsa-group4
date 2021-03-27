@@ -47,10 +47,10 @@ Project on location-based gaming App. It is a full stack gaming application whic
 
 ## User Stories
 
-1. [ ] As a player, I want to touch/click the first color to request a valid (treasure) location.
-1. [ ] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
-1. [ ] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
-1. [ ] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
+1. [x] As a player, I want to touch/click the first color to request a valid (treasure) location.
+1. [x] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
+1. [x] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
+1. [x] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
 1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
 ## CRUD operations for Location
@@ -142,3 +142,4 @@ View the application locally at <http://localhost:3000/>
 - Don't work on your desktop - organize your repos either by class or under a common folder (e.g., github or other).
 - Deploy as you work - if everything passes tests, do add / commit / push and deploy frequently (several times a week). 
 - Do hard things early. Do not delay figuring out the hard questions.
+- While [adding or creating a new location](https://www.google.com/maps/), add the valid cordinates for the latitude and longitude.
