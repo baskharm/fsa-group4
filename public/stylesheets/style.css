@@ -5,6 +5,10 @@ header{
   left: 41%;
 }
 
+.game-title{
+  text-align: center;
+  padding-top: 20px;
+}
 article {
   position: absolute;
   left: 50%;
