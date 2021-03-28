@@ -16,18 +16,20 @@ module.exports = (db, DataTypes) => {
     },
     locationName: {
       type: DataTypes.STRING(30),
-      unique: true,
+      unique: false,
       required: true,
       allowNull: false
     },
     locationLatitude: {
       type: DataTypes.DECIMAL(10, 8),
       allowNull: false,
+      unique: true,
       validate: { min: -90, max: 90 }
     },
     locationLongitude: {
       type: DataTypes.DECIMAL(11, 8),
       allowNull: false,
+      unique: true,
       validate: { min: -180, max: 180 }
     }
 
