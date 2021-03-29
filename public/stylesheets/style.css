@@ -9,6 +9,7 @@ header{
   text-align: center;
   padding-top: 20px;
 }
+
 article {
   position: absolute;
   left: 50%;
@@ -59,4 +60,23 @@ body {
 
 .form-group1{
   display: none;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.form-group{
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.image-circle{
+  width: 30px;
+  height: 30px;
+}
+
+.card-header{
+  font-size: x-large;
+  font-style: normal;
+  font-weight: bold;
 }
