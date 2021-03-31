@@ -16,27 +16,59 @@ module.exports = (db, DataTypes) => {
     },
     locationName: {
       type: DataTypes.STRING(30),
-      unique: false,
+      unique: true,
       required: true,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^([a-zA-Z]+\s)*[a-zA-Z]+$/i  ,
+          msg:
+            'Name accepts alphabets, neither numbers nor special characters.',
+        },
+        max: {
+          args: [30],
+          msg: 'Name is too long.',
+        },
+        min: {
+          args: [5],
+          msg: 'Name should have at least 5 characters.',
+        },
+      },
     },
+    
     locationLatitude: {
       type: DataTypes.DECIMAL(10, 8),
       allowNull: false,
-      unique: true,
-      validate: { min: -90, max: 90 }
+      validate: {
+        min: {
+          args: -90,
+          msg: 'Latitude must be -90 degrees or more.',
+        },
+        max: {
+          args: 90,
+          msg: 'Latitude must be 90 degrees or less.'
+        },
+      },
     },
+
+
     locationLongitude: {
       type: DataTypes.DECIMAL(11, 8),
       allowNull: false,
       unique: true,
-      validate: { min: -180, max: 180 }
-    }
+      validate: {
+        min: {
+          args: -180,
+          msg: 'Latitude must be -180 degrees or more.',
+        },
+        max: {
+          args: 180,
+          msg: 'Latitude must be 180 degrees or less.',
+        },
 
-    // radius: {
-    //   type: DataTypes.INTEGER,
-    //   required: true,
-    // }
+      }
+    }
+   
   });
 
 };
