@@ -5,6 +5,8 @@ import locationsArray from "./init-locations.js";
 // let device, location;
 let colorElement = document.getElementById("status1");
 let colorElement1 = document.getElementById("status");
+let incrementer = 0;
+
 
 
 window.addEventListener('load', main);
@@ -18,15 +20,21 @@ function main() {
 }
 
 async function onClickSquareBox1() {
+
+    if (incrementer == locationsArray.length) {
+        incrementer = 0;
+    }
+
+    // TESTING CHANGES
+    console.log("GET STORAGE LOCATIONS", localStorage.getItem("locations"));
+
     document.getElementById("targetloc").innerHTML = "The Treasure is in the location ";
-    document.getElementById("lbl").innerHTML = targetLoc.Name;
-    let utterance = new SpeechSynthesisUtterance(`The location where the treasure is ${targetLoc.Name}`);
+    document.getElementById("lbl").innerHTML = locationsArray[incrementer].Name;
+    let utterance = new SpeechSynthesisUtterance(`The location where the treasure is ${locationsArray[incrementer].Name}`);
     speechSynthesis.speak(utterance);
-   document.getElementById("device-lat").innerHTML = targetLoc.coordinates[0].latitude;
-    document.getElementById("device-long").innerHTML = targetLoc.coordinates[1].longitude;
- 
-
-
+    document.getElementById("device-lat").innerHTML = locationsArray[incrementer].coordinate.latitude;
+    document.getElementById("device-long").innerHTML = locationsArray[incrementer].coordinate.longitude;
+    incrementer++;
 
 }
 //     location = locationsArray[0];
@@ -86,7 +94,7 @@ async function getLocation() {
 }
 
 let currentlat, currentlon, loc, error = true;
-let targetLoc = locationsArray[Math.floor(Math.random() * locationsArray.length)];
+// let targetLoc = locationsArray[Math.floor(Math.random() * locationsArray.length)];
 
 async function onClickSquareBox2() {
     const locText = await getLocation();
