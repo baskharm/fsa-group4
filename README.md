@@ -120,6 +120,7 @@ git push
 Start the app by running npm run start.
 Until error handling is complete, a clean shutdown is better.
 Once error handling is complete, use npm run dev to start with nodemon.
+In order to update the code and see the changes evrytime locally then use the command "npm run dev" .
 
 ```PowerShell
 npm run start
@@ -139,6 +140,7 @@ View the application locally at <http://localhost:3000/>
 ## Remainders
 - Avoid spaces in folders and file names.
 - Don't work on stale code - "ALWAYS PULL FIRST"
+- Repo name has to be unique. and use lower case for naming convention.
 - Don't work on your desktop - organize your repos either by class or under a common folder (e.g., github or other).
 - Deploy as you work - if everything passes tests, do add / commit / push and deploy frequently (several times a week). 
 - Do hard things early. Do not delay figuring out the hard questions.
