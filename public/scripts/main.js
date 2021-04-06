@@ -21,8 +21,11 @@ colorElement1.addEventListener('touch', onClickSquareBox1);
 
 async function onClickSquareBox1() {
 
+    const details = await fetch("/findall")
+    console.log(details);
+
     if (incrementer == locationsArray.length) {
-        incrementer = 0;
+        incrementer = 0;    
     }
 
     // TESTING CHANGES
