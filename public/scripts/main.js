@@ -7,7 +7,9 @@ let colorElement = document.getElementById("status1");
 let colorElement1 = document.getElementById("status");
 let incrementer = 0;
 
-
+function main() {
+    console.log('Page is fully loaded');
+}
 
 window.addEventListener('load', main);
 colorElement.addEventListener('click', onClickSquareBox2);
@@ -15,9 +17,7 @@ colorElement.addEventListener('touch', onClickSquareBox2);
 colorElement1.addEventListener('click', onClickSquareBox1);
 colorElement1.addEventListener('touch', onClickSquareBox1);
 
-function main() {
-    console.log('Page is fully loaded');
-}
+
 
 async function onClickSquareBox1() {
 
@@ -29,7 +29,8 @@ async function onClickSquareBox1() {
     console.log("GET STORAGE LOCATIONS", localStorage.getItem("locations"));
 
     document.getElementById("targetloc").innerHTML = "The Treasure is in the location ";
-    document.getElementById("lbl").innerHTML = locationsArray[incrementer].Name;
+    document.getElementById("lbl").innerHTML = targetLoc.Name;
+    // locationsArray[incrementer].Name;
     let utterance = new SpeechSynthesisUtterance(`The location where the treasure is ${locationsArray[incrementer].Name}`);
     speechSynthesis.speak(utterance);
     document.getElementById("device-lat").innerHTML = locationsArray[incrementer].coordinate.latitude;
@@ -94,7 +95,7 @@ async function getLocation() {
 }
 
 let currentlat, currentlon, loc, error = true;
-// let targetLoc = locationsArray[Math.floor(Math.random() * locationsArray.length)];
+let targetLoc = locationsArray[Math.floor(Math.random() * locationsArray.length)];
 
 async function onClickSquareBox2() {
     const locText = await getLocation();

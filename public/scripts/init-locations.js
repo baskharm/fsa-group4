@@ -12,23 +12,22 @@ export default [
     {
         Name: 'Horizons West Apartments',
         type: 'circle',
-        coordinate:
+        coordinate: [
         {
             latitude: 41.31447748801441,
             longitude: -95.05660917970772
-        }
+        }]
 
 
     },
     {
         Name: 'B.D Owens Library',
         type: 'circle',
-        coordinate:
+        coordinate:[
         {
             latitude: 40.353523,
             longitude: -94.886021
-        }
-
+        }]
 
     }
 ];
