@@ -47,7 +47,7 @@ app.use(expressLayouts);
 app.use(morgan('combined'));
 
 // app middleware - production
- app.use(helmet()); // security, http headers
+ app.use(helmet({contentSecurityPolicy:false})); // security, http headers
 app.use(compression()); // compress all routes
 
 // app middleware - expose passport req.location to views
@@ -79,26 +79,6 @@ app.use(baseUrl, require('./routes/index'));
 module.exports = app;
 
 
-// const express = require('express')
-// const app = express()
-// const port = process.env.PORT || 3000
-
-// app.get('/', (req, res) => {
-//   res.send('Welcome to Location based gaming app.')
-// })
-
-
 
   
-// app.get('/contact', (req, res) => {
-//     res.send(' Displays the contact page of this app. ')
-//   })
-// app.get('/help', (req, res) => {
-//     res.send(' Displays the help page of this app. ')
-//   })
-// app.get('/help/:topic', (req, res) => {
-//     res.send(` How can I help you with this ${req.params.topic}. `)
-//   })
-// app.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${port}`)
-// })
+

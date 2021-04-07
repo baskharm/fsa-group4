@@ -34,7 +34,7 @@ async function onClickSquareBox1() {
     document.getElementById("targetloc").innerHTML = "The treasure location is ready..! ";
     document.getElementById("lbl").innerHTML = " Start playing the game.";
     // locationsArray[incrementer].Name;
-    let utterance = new SpeechSynthesisUtterance(`The treasure location is ready.Start playing the game.`);
+    let utterance = new SpeechSynthesisUtterance(`The treasure location is ready start playing the game.`);
     speechSynthesis.speak(utterance);
     // document.getElementById("device-lat").innerHTML = targetLoc.coordinate[0].latitude;
     // document.getElementById("device-long").innerHTML =targetLoc.coordinate[0].longitude;
@@ -106,10 +106,10 @@ async function onClickSquareBox2() {
     // document.getElementById("location").innerHTML = loc;
     currentlat = locText.coords.latitude;
     console.log(currentlat)
-    document.getElementById("device-lat").innerHTML = currentlat;
+    document.getElementById("device-lat").innerHTML = currentlat.toFixed(9);
     currentlon = locText.coords.longitude;
     console.log(currentlon)
-    document.getElementById("device-long").innerHTML = currentlon;
+    document.getElementById("device-long").innerHTML = currentlon.toFixed(9);
 
     locationsArray.forEach(function (value) {
         if (isInside(value.Latitude, value.Longitude)) {
