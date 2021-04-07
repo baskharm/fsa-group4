@@ -105,20 +105,20 @@ const onListening = async () => {
 };
 
 // /* Workaround for increment indexes of postgre not updating after seeding by manually setting them */
-// const updatePostgreSequences = async (db) => {
-//   if (process.env.NODE_ENV !== "production") return;
-//   const extistingLocations = await db.models.location.count();
+const updatePostgreSequences = async (db) => {
+  if (process.env.NODE_ENV !== "production") return;
+  const extistingLocations = await db.models.Location.count();
 //   const extistingCoordinates = await db.models.coordinate.count();
 
-//   await db.queryInterface.sequelize.query(
-//     `ALTER SEQUENCE "locations_id_seq" RESTART WITH ${extistingLocations + 1}`
-//   );
+  await db.queryInterface.sequelize.query(
+    `ALTER SEQUENCE "locations_id_seq" RESTART WITH ${extistingLocations + 1}`
+  );
 //   // await db.queryInterface.sequelize.query(
 //   //   `ALTER SEQUENCE "coordinates_id_seq" RESTART WITH ${
 //   //     extistingCoordinates + 1
 //   //   }`
 //   // );
-// };
+};
 
 /**
  * Listen on provided port, on all network interfaces.
