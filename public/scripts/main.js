@@ -31,13 +31,13 @@ async function onClickSquareBox1() {
     // TESTING CHANGES
     console.log("GET STORAGE LOCATIONS", localStorage.getItem("locations"));
 
-    document.getElementById("targetloc").innerHTML = "The Treasure is in the location ";
-    document.getElementById("lbl").innerHTML = targetLoc.Name;
+    document.getElementById("targetloc").innerHTML = "The treasure location is ready..! ";
+    document.getElementById("lbl").innerHTML = " Start playing the game.";
     // locationsArray[incrementer].Name;
-    let utterance = new SpeechSynthesisUtterance(`The location where the treasure is ${locationsArray[incrementer].Name}`);
+    let utterance = new SpeechSynthesisUtterance(`The treasure location is ready.Start playing the game.`);
     speechSynthesis.speak(utterance);
-    document.getElementById("device-lat").innerHTML = locationsArray[incrementer].coordinate.latitude;
-    document.getElementById("device-long").innerHTML = locationsArray[incrementer].coordinate.longitude;
+    // document.getElementById("device-lat").innerHTML = targetLoc.coordinate[0].latitude;
+    // document.getElementById("device-long").innerHTML =targetLoc.coordinate[0].longitude;
     incrementer++;
 
 }
@@ -106,10 +106,10 @@ async function onClickSquareBox2() {
     // document.getElementById("location").innerHTML = loc;
     currentlat = locText.coords.latitude;
     console.log(currentlat)
-    document.getElementById("device-lat").innerHTML = currentlat.toFixed(6);
+    document.getElementById("device-lat").innerHTML = currentlat;
     currentlon = locText.coords.longitude;
     console.log(currentlon)
-    document.getElementById("device-long").innerHTML = currentlon.toFixed(6);
+    document.getElementById("device-long").innerHTML = currentlon;
 
     locationsArray.forEach(function (value) {
         if (isInside(value.Latitude, value.Longitude)) {
