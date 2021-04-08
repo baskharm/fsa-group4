@@ -1,11 +1,11 @@
 /**
  * Location controller
  *  Handles requests related to location (see routes)
- *
- * @author Bhaskar reddy Minupuri <S538310@nwmissouri.edu>
- * @author Rajeshwari Rudravaram <s538361@nwmissouri.edu>
+ * @author Dr.Case
+ * @modifiedBy Bhaskar reddy Minupuri <S538310@nwmissouri.edu>
+ * @modifiedBy Rajeshwari Rudravaram <s538361@nwmissouri.edu>
  */
-const { ValidationError } = require('sequelize');
+const { ValidationError } = require("sequelize");
 const LOG = require('../util/logger');
 const db = require('../models/index')();
 
@@ -17,25 +17,20 @@ const tabTitle = 'Locations';
 module.exports.findAll = async (req, res) => {
   (await db).models.Location.findAll({
     attributes: {
-      exclude: ['createdAt', 'updatedAt'],
+      exclude: ["createdAt", "updatedAt"],
     },
-    include: [
-      {
-        model: (await db).models.Location,
-        attributes: ['locationId', 'locationName', 'locationLatitude', 'locationLongitude'], 
-      },
-    ],
   })
     .then((data) => {
-      localStorage.setItem("locations",JSON.stringify(data));
       res.send(data);
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).send({
-        message: err.message || 'Error retrieving all.',
+        message: err.message || "Error retrieving all.",
       });
     });
 };
+
 
 // GET one JSON by ID
 module.exports.findOne = async (req, res) => {
@@ -45,6 +40,24 @@ module.exports.findOne = async (req, res) => {
       res.send(data);
     })
     .catch((err) => {
+      LOG.error(`Error: ${JSON.stringify(err)}`);
+      res.status(500).send({
+        message: `Error retrieving item with id=${locationId}: ${err.message}`,
+      });
+    });
+};
+// GET a random location 
+module.exports.findRandom = async (req, res) => {
+  (await db).models.Location.findAll({
+    attributes: {
+      exclude: ["createdAt", "updatedAt"],
+    },
+  })
+    .then((data) => {
+      res.send(data[Math.floor(Math.random() * (data.length - 0) + 0)]);
+    })
+    .catch((err) => {
+      LOG.error(`Error: ${JSON.stringify(err)}`);
       res.status(500).send({
         message: `Error retrieving item with id=${locationId}: ${err.message}`,
       });
@@ -67,8 +80,6 @@ module.exports.saveNew = async (req, res) => {
 
 // POST /save/:id
 module.exports.saveEdit = async (req, res) => {
-
- 
   try {
     const reqId = parseInt(req.params.locationId);
     const context = await db;
