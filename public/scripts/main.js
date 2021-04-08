@@ -65,4 +65,69 @@ async function onClickSquareBox1() {
     document.getElementById("device-lat").innerHTML = `Your location: `;
     document.getElementById("device-long").innerHTML = `(${currentlat.toFixed(
       5
-    )}, ${currentlon.toFixed(5)})`;  
+    )}, ${currentlon.toFixed(5)})`;
+    
+    if (isInside(targetLoc.locationLatitude, targetLoc.locationLongitude)) {
+        const successMessage = `Congratulations!, You found location ${targetLoc.locationName}`;
+        document.getElementById("location").innerHTML = successMessage;
+        const utterance = new SpeechSynthesisUtterance(successMessage);
+        speechSynthesis.speak(utterance);
+    
+        //Show a success notification for 2 seconds
+        Swal.fire({
+          icon: "success",
+          title: "Congratulations!",
+          text: successMessage,
+          showConfirmButton: false,
+          timer: 2000,
+        });
+      } else {
+        const directions = directionsTowardsQuest(currentlat, currentlon);
+        const message = `Sorry,You're not near to the treasure. Please head ${
+          directions.length > 1
+            ? `${directions[0]} ${directions[1]}`
+            : directions[0]
+        }.`;
+    
+        document.getElementById("error-message").innerHTML = message;
+        const utterance = new SpeechSynthesisUtterance(message);
+        speechSynthesis.speak(utterance);
+      }
+    }
+    
+    //Detect if the current location is inside a bounding box
+    function isInside(questLat, questLon) {
+      return distanceBetweenLocations(questLat, questLon) < 30 ? true : false;
+    }
+    
+    //Calculate the directions in which the player is required to move to reach the selected quest
+    function directionsTowardsQuest(currentLatitude, currentLongitude) {
+      const questLatitude = targetLoc.locationLatitude;
+      const questLongitude = targetLoc.locationLongitude;
+      let directionsArray = [];
+    
+      if (currentLatitude > questLatitude) directionsArray.push("South");
+      else directionsArray.push("North");
+    
+      if (currentLongitude < questLongitude) directionsArray.push("East");
+      else directionsArray.push("West");
+    
+      return directionsArray;
+    }
+    
+    //Measue the distance between two coordinates by haversine formula
+    function distanceBetweenLocations(questLat, questLon) {
+      const R = 6371e3;
+      const φ1 = (currentlat * Math.PI) / 180;
+      const φ2 = (questLat * Math.PI) / 180;
+      const Δφ = ((questLat - currentlat) * Math.PI) / 180;
+      const Δλ = ((questLon - currentlon) * Math.PI) / 180;
+    
+      const a =
+        Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+        Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    
+      const d = R * c;
+      return d;
+    }
