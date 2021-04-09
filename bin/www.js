@@ -112,7 +112,7 @@ const updatePostgreSequences = async (db) => {
 //   const extistingCoordinates = await db.models.coordinate.count();
 
   await db.queryInterface.sequelize.query(
-    `ALTER SEQUENCE "locations_id_seq" RESTART WITH ${extistingLocations + 1}`
+    `ALTER SEQUENCE "Locations_locationId_seq" RESTART WITH ${extistingLocations + 1}`
   );
 //   // await db.queryInterface.sequelize.query(
 //   //   `ALTER SEQUENCE "coordinates_id_seq" RESTART WITH ${
