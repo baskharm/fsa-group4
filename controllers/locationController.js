@@ -73,6 +73,7 @@ module.exports.saveNew = async (req, res) => {
     await context.models.Location.create(req.body);
     return res.redirect('/location');
   } catch (err) {
+    console.log(err);
     return res.redirect('/location');
   }
 };
