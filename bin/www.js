@@ -95,9 +95,10 @@ const onListening = async () => {
   try {
     const db = await require('../models/index')();
     await require('../util/seeder')(db);
+    updatePostgreSequences(db);
   } catch (err) {
     LOG.error(`ERROR with database:${err.message}`);
-    // updatePostgreSequences(db);
+    
   }
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
