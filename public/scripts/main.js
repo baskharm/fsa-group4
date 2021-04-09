@@ -34,9 +34,9 @@ async function onClickSquareBox1() {
         );
         speechSynthesis.speak(utterance);
         document.getElementById("device-lat").innerHTML =
-          targetLoc.locationLatitude;
+          " ";
         document.getElementById("device-long").innerHTML =
-          targetLoc.locationLongitude;
+          " ";
       },
     });
   }
