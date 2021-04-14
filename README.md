@@ -1,6 +1,6 @@
 # Game of Treasures [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://fsagroup4.herokuapp.com/)
 
-Project on location-based gaming App. It is a full stack gaming application which progress with clues.
+Project on location-based gaming App. It is a full stack gaming application which progresses with directions.
 
 ## Group Members
 <table>
@@ -12,9 +12,9 @@ Project on location-based gaming App. It is a full stack gaming application whic
  </table>
 
 ## Full Stack App
- - A touch-based app that checks our current location and determines the target, and if a user touches or clicks repeatedly on first color then the device compares the current location coordinates with the target and tells the user whether they are inside the treasure location or not.
- - If a user touches or clicks the first color of app then it provides a valid treasure location.
- - If a user is away from target location then, User will hear information to help me and see the clue to find the trasure location.
+ - A touch-based app that checks our current location and determines the target, and if a user touches or clicks repeatedly on second color then the device compares the current location coordinates with the target which is the first color component and tells the user whether they are inside the treasure location or not.
+ - If a user touches or clicks the first color of app then it provides a valid treasure location from the set of locations.
+ - If a user is away from target location then, User will hear and see the directions in which he/she needs to move to reach the trasure location.
  - Finally, when user reaches the destination then the user will hear and see the confirmation of reaching the treasure location.
 
 ## Stack
@@ -51,7 +51,7 @@ Project on location-based gaming App. It is a full stack gaming application whic
 1. [x] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
 1. [x] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
 1. [x] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
-1. [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
+1. [x] As a player, after confirmation that I have earned a location, I can start a new game again.
 
 ## CRUD operations for Location
 - User can enable all CRUD options (create, read, update, delete,list) on locations.
