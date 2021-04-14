@@ -22,7 +22,7 @@ article {
 #status {
   height: 200px;
   width: 200px;
-  background: rgb(177, 52, 3);
+  background: rgb(151, 177, 3);
   float: left;
   margin-left: 2px;
   border: 1px solid #ccc;
@@ -32,7 +32,7 @@ article {
 #status1 {
   height: 200px;
   width: 200px;
-  background: rgb(202, 156, 3);
+  background: rgb(45, 56, 63);
   float: left;
     margin-left: 2px;
   border: 1px solid #ccc;
