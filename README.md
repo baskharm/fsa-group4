@@ -12,10 +12,11 @@ Project on location-based gaming App. It is a full stack gaming application whic
  </table>
 
 ## Full Stack App
- - A touch-based app that checks our current location and determines the target, and if a user touches or clicks repeatedly on second color then the device compares the current location coordinates with the target which is the first color component and tells the user whether they are inside the treasure location or not.
- - If a user touches or clicks the first color of app then it provides a valid treasure location from the set of locations.
- - If a user is away from target location then, User will hear and see the directions in which he/she needs to move to reach the trasure location.
- - Finally, when user reaches the destination then the user will hear and see the confirmation of reaching the treasure location.
+ - A touch-based gaming app, where a user will find the target location with the help of directions provide by the app with respect to User location.
+ - If a user touches or clicks the first color of app then it provides a valid treasure location from the given set of locations.
+ -   If a user touches or clicks repeatedly on second color then the device compares the current location coordinates with the target location and tells the user whether they  are inside or outside the treasure location.
+ -  If a user is far from target location then, User will hear and see the directions in which he/she needs to move to reach the treasure location.
+ - Finally, when user reaches the destination then the user will hear and see the confirmation of reaching the selected treasure location.
 
 ## Stack
 * Platform: Node(Version - v15.1.0)
@@ -134,7 +135,7 @@ View the application locally at <http://localhost:3000/>
 
 ## References
 - [Web-app fall 2020 app](https://github.com/denisecase/web-app-2020-fall)
-- [Talk2-group-7](https://github.com/KHARIKA17/talk-2-group-7)
+- [Group-11-full-stack-app](https://github.com/KHARIKA17/Group-11-Full-stack-app)
 - [Talk-2-treasure-5](https://github.com/Puneeth159/talk-2-treasure-5)
 
 ## Remainders

@@ -26,22 +26,24 @@ module.exports = async (db) => {
         // list of locations........
         {
           locationId: 1,
-          locationName: 'Bearcat football stadium',
-          locationLatitude: 40.3515,
-          locationLongitude: -94.8826
+          locationName: 'B D Owens Library',
+          locationLatitude: 40.353523,
+          locationLongitude: -94.886021
         },
         {
           locationId: 2,
-          locationName: "Colden Pond",
-          locationLatitude: 40.3511,
-          locationLongitude: -94.882,
+          locationName: 'Colden Pond',
+          locationLatitude: 40.35111268683,
+          locationLongitude: -94.8822024375
         },
         {
           locationId: 3,
-          locationName: "Bearcat Soccer field",
-          locationLatitude: 40.3513,
-          locationLongitude: -94.8828,
+          locationName: 'Horizons West Apartments',
+          locationLatitude: 41.3144774880,
+          locationLongitude: -95.0566091797
         },
+
+
 
       ],
       { validate: true } // add options object to call new model validators
