@@ -64,8 +64,8 @@ async function onClickSquareBox1() {
     document.getElementById("location").innerHTML = "";
     document.getElementById("device-lat").innerHTML = `Your location: `;
     document.getElementById("device-long").innerHTML = `(${currentlat.toFixed(
-      5
-    )}, ${currentlon.toFixed(5)})`;
+      6
+    )}, ${currentlon.toFixed(6)})`;
     
     if (isInside(targetLoc.locationLatitude, targetLoc.locationLongitude)) {
         const successMessage = `Congratulations!, You found location ${targetLoc.locationName}`;
